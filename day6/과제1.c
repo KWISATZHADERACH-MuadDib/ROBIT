@@ -38,15 +38,15 @@ int sorting(Student arr[]) {
 
 	while (compare(arr)) {
 		for (i = 0; i < 4; i++) {
-			// 1. 학년이 큰 경우
+			// 학년이 큰 경우
 			if (arr[i].number > arr[i + 1].number) {
 				switching(arr, i, i + 1);
 			}
-			// 2. 학년은 같지만 성적이 더 큰 경우
+			// 학년은 같지만 성적이 더 큰 경우
 			else if (arr[i].number == arr[i + 1].number && arr[i].grade > arr[i + 1].grade) {
 				switching(arr, i, i + 1);
 			}
-			// 3. 학년과 성적은 같지만 이름이 사전순으로 뒤인 경우
+			// 학년과 성적은 같지만 이름이 사전순으로 뒤인 경우
 			else if (arr[i].number == arr[i + 1].number && arr[i].grade == arr[i + 1].grade && string_compare(arr[i].name, arr[i + 1].name) == 1) {
 				switching(arr, i, i + 1);
 			}
