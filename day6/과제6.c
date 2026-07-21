@@ -4,9 +4,12 @@
 int main() {
 	int input[12];
 	int i = 0, j, k;
-
+ 
 	while (i < 12) {				//입력이 반영되는 범위가 i < 12이기때문에 i가 12이상이 된다면 반복문을 중단한다.
-		printf("input : ");
+		if (i == 0)
+			printf("input : ");
+		else
+			printf("next input : ");
 		scanf("%d", (input + i));	//배열 입력은 &arr[i] 인데 포인터에서 배열은 *(arr + 1)이므로 포인터를 이용해 입력받을 때에는 (input + i)를 사용하면 된다.
 		k = 0;
 		for (j = 0; j < 12; j++) {
