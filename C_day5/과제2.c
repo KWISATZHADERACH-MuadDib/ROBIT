@@ -62,7 +62,7 @@ void arr_ij(int* sizeRow, int* sizeCol, int** pArr) {
 				y += direction[direc].y;
 				x += direction[direc].x;
 			}
-			else {		//다음 배열에 값이 있는 경우
+			else {		//다음 배열에 값이 있는 경우 -> 방향 전환
 				if (direc == 3)
 					direc = 0;
 				else
@@ -71,7 +71,7 @@ void arr_ij(int* sizeRow, int* sizeCol, int** pArr) {
 				x += direction[direc].x;
 			}
 		}
-		else {
+		else {			//벽에 막혔을 경우
 			if (direc == 3)
 				direc = 0;
 			else
