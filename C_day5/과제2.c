@@ -71,7 +71,7 @@ void arr_ij(int* sizeRow, int* sizeCol, int** pArr) {
 				x += direction[direc].x;
 			}
 		}
-		else {			//벽에 막혔을 경우
+		else {			//벽에 막혔을 경우 -> 방향 전환
 			if (direc == 3)
 				direc = 0;
 			else
